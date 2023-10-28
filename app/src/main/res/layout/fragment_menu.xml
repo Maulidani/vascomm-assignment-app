@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.view.menu.MenuFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@android:color/transparent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/blue_opacity_50"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_close"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="@dimen/screen_margin"
+                android:layout_marginTop="@dimen/screen_margin"
+                app:cardCornerRadius="100dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="X"
+                    android:textColor="@color/black" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/space_12"
+                android:background="@color/white">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_profile"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:layout_marginStart="@dimen/space_32"
+                    android:layout_marginTop="@dimen/space_76"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/img_example_profile" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_first_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_16"
+                    android:fontFamily="@font/gilroy_extrabold"
+                    android:text="Angga"
+                    android:textColor="@color/blue_02"
+                    android:textSize="@dimen/text_subhead_size"
+                    app:layout_constraintLeft_toRightOf="@id/card_profile"
+                    app:layout_constraintTop_toTopOf=" @id/card_profile" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_last_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_4"
+                    android:fontFamily="@font/gilroy_light"
+                    android:text="Praja"
+                    android:textColor="@color/blue_01"
+                    android:textSize="@dimen/text_subhead_size"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@id/tv_first_name"
+                    app:layout_constraintTop_toTopOf=" @id/tv_first_name" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_position_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_8"
+                    android:fontFamily="@font/gilroy_light"
+                    android:text="Membership BBLK"
+                    android:textColor="@color/blue_01"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_first_name"
+                    app:layout_constraintTop_toBottomOf="@id/tv_last_name" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_profile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/screen_margin"
+                    android:layout_marginTop="@dimen/space_24"
+                    android:background="@android:color/transparent"
+                    android:drawableEnd="@drawable/ic_arrow_right_02"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:gravity="start|center_vertical"
+                    android:text="Profile Saya"
+                    android:textAllCaps="false"
+                    android:textColor="@color/gray_01"
+                    android:textStyle="bold"
+                    app:cornerRadius="@dimen/space_8"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="@+id/tv_position_name"
+                    app:layout_constraintTop_toBottomOf="@id/card_profile" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_setting"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/screen_margin"
+                    android:background="@android:color/transparent"
+                    android:drawableEnd="@drawable/ic_arrow_right_02"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:gravity="start|center_vertical"
+                    android:text="Pengaturan"
+                    android:textAllCaps="false"
+                    android:textColor="@color/gray_01"
+                    android:textStyle="bold"
+                    app:cornerRadius="@dimen/space_8"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="@+id/tv_position_name"
+                    app:layout_constraintTop_toBottomOf="@id/btn_profile" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_logout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_32"
+                    android:layout_marginTop="@dimen/space_24"
+                    android:backgroundTint="@color/red_01"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:gravity="center"
+                    android:text="Logout"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:cornerRadius="100dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="@+id/tv_position_name"
+                    app:layout_constraintTop_toBottomOf="@id/btn_setting" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_follow_us"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_8"
+                    android:layout_marginEnd="60dp"
+                    android:fontFamily="@font/gilroy_light"
+                    android:text="Ikuti Kami di"
+                    android:textColor="@color/blue_01"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_term_and_condition"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btn_logout" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_8"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_follow_us"
+                    app:layout_constraintLeft_toRightOf="@id/tv_follow_us"
+                    app:layout_constraintTop_toTopOf="@+id/tv_follow_us">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_facebook" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginStart="@dimen/space_4"
+                        android:src="@drawable/ic_instagram" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginStart="@dimen/space_4"
+                        android:src="@drawable/ic_twitter" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_term_and_condition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_8"
+                    android:layout_marginBottom="@dimen/screen_margin"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:text="FAQ   |   Terms and Conditions"
+                    android:textColor="@color/gray_01"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>
